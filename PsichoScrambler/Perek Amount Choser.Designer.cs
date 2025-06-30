@@ -44,29 +44,32 @@
             // 
             CamotiButton.BackColor = Color.Yellow;
             CamotiButton.Enabled = false;
-            CamotiButton.Location = new Point(177, 55);
+            CamotiButton.Location = new Point(109, 34);
+            CamotiButton.Margin = new Padding(2);
             CamotiButton.Name = "CamotiButton";
-            CamotiButton.Size = new Size(285, 49);
+            CamotiButton.Size = new Size(175, 31);
             CamotiButton.TabIndex = 0;
             CamotiButton.Text = "כמותי";
             CamotiButton.UseVisualStyleBackColor = false;
             // 
             // CamotiAmount
             // 
-            CamotiAmount.Location = new Point(483, 61);
+            CamotiAmount.Location = new Point(297, 38);
+            CamotiAmount.Margin = new Padding(2);
             CamotiAmount.Maximum = new decimal(new int[] { 3, 0, 0, 0 });
             CamotiAmount.Name = "CamotiAmount";
-            CamotiAmount.Size = new Size(86, 39);
+            CamotiAmount.Size = new Size(53, 27);
             CamotiAmount.TabIndex = 1;
             CamotiAmount.TextAlign = HorizontalAlignment.Center;
             CamotiAmount.ValueChanged += CamotiAmount_ValueChanged;
             // 
             // HebrewAmount
             // 
-            HebrewAmount.Location = new Point(483, 162);
+            HebrewAmount.Location = new Point(297, 101);
+            HebrewAmount.Margin = new Padding(2);
             HebrewAmount.Maximum = new decimal(new int[] { 3, 0, 0, 0 });
             HebrewAmount.Name = "HebrewAmount";
-            HebrewAmount.Size = new Size(86, 39);
+            HebrewAmount.Size = new Size(53, 27);
             HebrewAmount.TabIndex = 3;
             HebrewAmount.TextAlign = HorizontalAlignment.Center;
             HebrewAmount.ValueChanged += HebrewAmount_ValueChanged;
@@ -75,19 +78,21 @@
             // 
             HebrewButton.BackColor = Color.Yellow;
             HebrewButton.Enabled = false;
-            HebrewButton.Location = new Point(177, 156);
+            HebrewButton.Location = new Point(109, 98);
+            HebrewButton.Margin = new Padding(2);
             HebrewButton.Name = "HebrewButton";
-            HebrewButton.Size = new Size(285, 49);
+            HebrewButton.Size = new Size(175, 31);
             HebrewButton.TabIndex = 2;
             HebrewButton.Text = "עברית";
             HebrewButton.UseVisualStyleBackColor = false;
             // 
             // EnglishAmount
             // 
-            EnglishAmount.Location = new Point(483, 265);
+            EnglishAmount.Location = new Point(297, 166);
+            EnglishAmount.Margin = new Padding(2);
             EnglishAmount.Maximum = new decimal(new int[] { 3, 0, 0, 0 });
             EnglishAmount.Name = "EnglishAmount";
-            EnglishAmount.Size = new Size(86, 39);
+            EnglishAmount.Size = new Size(53, 27);
             EnglishAmount.TabIndex = 5;
             EnglishAmount.TextAlign = HorizontalAlignment.Center;
             EnglishAmount.ValueChanged += EnglishAmount_ValueChanged;
@@ -96,9 +101,10 @@
             // 
             EnglishButton.BackColor = Color.Yellow;
             EnglishButton.Enabled = false;
-            EnglishButton.Location = new Point(177, 259);
+            EnglishButton.Location = new Point(109, 162);
+            EnglishButton.Margin = new Padding(2);
             EnglishButton.Name = "EnglishButton";
-            EnglishButton.Size = new Size(285, 49);
+            EnglishButton.Size = new Size(175, 31);
             EnglishButton.TabIndex = 4;
             EnglishButton.Text = "אנגלית";
             EnglishButton.UseVisualStyleBackColor = false;
@@ -106,9 +112,10 @@
             // GenerateButton
             // 
             GenerateButton.BackColor = Color.ForestGreen;
-            GenerateButton.Location = new Point(139, 340);
+            GenerateButton.Location = new Point(86, 212);
+            GenerateButton.Margin = new Padding(2);
             GenerateButton.Name = "GenerateButton";
-            GenerateButton.Size = new Size(381, 46);
+            GenerateButton.Size = new Size(234, 29);
             GenerateButton.TabIndex = 6;
             GenerateButton.Text = "צור סדר פרקים";
             GenerateButton.UseMnemonic = false;
@@ -117,9 +124,9 @@
             // 
             // PerekAmountChoser
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(714, 398);
+            ClientSize = new Size(439, 249);
             Controls.Add(GenerateButton);
             Controls.Add(EnglishAmount);
             Controls.Add(EnglishButton);
@@ -127,6 +134,8 @@
             Controls.Add(HebrewButton);
             Controls.Add(CamotiAmount);
             Controls.Add(CamotiButton);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(2);
             Name = "PerekAmountChoser";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Perek_Amount_Choser";

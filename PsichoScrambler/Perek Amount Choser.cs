@@ -12,36 +12,47 @@ namespace PsichoScrambler
 {
     public partial class PerekAmountChoser : Form
     {
+        public const int k_RequiredSections = 8;
         public int NumberOfSections { get; private set; } = 0;
+
+        private int camotiNum = 0;
+        private int hebrewNum = 0;
+        private int englishNum = 0;
         public PerekAmountChoser()
         {
             InitializeComponent();
         }
 
-        private void CamotiAmount_ValueChanged(object sender, EventArgs e)
+        private void CamotiAmount_ValueChanged(object i_Sender, EventArgs i_E)
         {
-            NumericUpDown? camotiAmount = sender as NumericUpDown;
-            NumberOfSections += (int)camotiAmount!.Value;
+            NumericUpDown? camotiAmount = i_Sender as NumericUpDown;
+            camotiNum = (int)camotiAmount!.Value;
         }
 
-        private void HebrewAmount_ValueChanged(object sender, EventArgs e)
+        private void HebrewAmount_ValueChanged(object i_Sender, EventArgs i_E)
         {
-            NumericUpDown? hebrewAmount = sender as NumericUpDown;
-            NumberOfSections += (int)hebrewAmount!.Value;
+            NumericUpDown? hebrewAmount = i_Sender as NumericUpDown;
+            hebrewNum = (int)hebrewAmount!.Value;
         }
 
-        private void EnglishAmount_ValueChanged(object sender, EventArgs e)
+        private void EnglishAmount_ValueChanged(object i_Sender, EventArgs i_E)
         {
-            NumericUpDown? englishAmount = sender as NumericUpDown;
-            NumberOfSections += (int)EnglishAmount!.Value;
+            NumericUpDown? englishAmount = i_Sender as NumericUpDown;
+            englishNum = (int)EnglishAmount!.Value;
         }
 
-        private void GenerateButton_Click(object sender, EventArgs e)
+        private void GenerateButton_Click(object i_Sender, EventArgs i_E)
         {
-            if(NumberOfSections != 8)
+            NumberOfSections = camotiNum + hebrewNum + englishNum;
+            if (NumberOfSections != k_RequiredSections)
             {
                 Error screen = new Error();
                 screen.ShowDialog();
+            }
+            else
+            {
+                SectionView sectionView = new SectionView();
+                sectionView.ShowDialog();
             }
         }
     }
